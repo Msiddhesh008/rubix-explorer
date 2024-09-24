@@ -1,12 +1,9 @@
-import './App.css'
+import { Box } from '@chakra-ui/react'
+import React from 'react'
 
-function App() {
-  
-
+const App = () => {
   return (
-    <Box>
-
-    </Box>
+    <Box>App</Box>
   )
 }
 
