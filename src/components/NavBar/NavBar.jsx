@@ -53,7 +53,7 @@ const NavBar = () => {
         id="navbar"
         // bg={colorMode === "light" ? "light" : "black.900"}
         color={colorMode === "light" ? "light" : "black.900"}
-        padding={"15px 0px"}
+        padding={"22px 0px"}
         // borderBottom={"1px solid #ccc"}
         borderBottom={colorMode === "light" ? "1px solid #ccc" : "none"}
       >

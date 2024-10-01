@@ -3,6 +3,7 @@ import React, { useContext } from "react";
 import { MdOutlineErrorOutline } from "react-icons/md";
 import Pagination from "../Pagination";
 import GlobalStateContext from "../../Contexts/GlobalStateContext";
+import { Link } from "react-router-dom";
 
 
 
@@ -45,7 +46,9 @@ const LatestTransactions = () => {
                   </Text>
                   <HStack fontSize={"sm"} gap={4} mb={2}>
                     <Text color={colorMode === "light" ? "#0F0F0F" : "#E8E8E8"}>Sender :</Text>
-                    <Text color={colorMode === "light" ? "#230A79" : "#B09AFF"} textDecoration={"underline"}>{transaction.sender}</Text>
+                    <Text color={colorMode === "light" ? "#230A79" : "#B09AFF"} textDecoration={"underline"}>
+                      <Link>{transaction.sender}</Link>
+                    </Text>
                   </HStack>
                   <HStack fontSize={"sm"} gap={4} mb={3}>
                     <Text color={colorMode === "light" ? "#0F0F0F" : "#E8E8E8"}>Receiver :</Text>

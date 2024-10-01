@@ -19,6 +19,7 @@ import SwitchCharts from "../components/SwitchBtn/SwitchCharts";
 import LatestTransactions from "../components/LatestTransactions/LatestTransactions";
 import { Link } from "react-router-dom";
 import Pagination from "../components/Pagination";
+import bannerImage from "../assets/images/bannerImg.png";
 
 const Home = () => {
   const [isSwitchOn, setIsSwitchOn] = useState(true);
@@ -26,9 +27,11 @@ const Home = () => {
 
   return (
     <>
-      <Box 
-        // bg={colorMode === "light" ? "#fff" : "linear-gradient(126.97deg, rgba(6, 11, 38, 0.74) 28.26%, rgba(26, 31, 55, 0.5) 91.2%);"}
-        bg={colorMode === "light" ? "#fff" : "#000"}
+      <Box
+        bg={colorMode === "light" ? "#fff" : "none"}
+        backgroundImage={colorMode !== "light" ? `url(${bannerImage})` : "none"}
+        backgroundSize="contain"
+        backgroundRepeat="no-repeat"
       >
         <VStack mb={"5rem"}>
           <Container maxW="container.sm" position={"relative"}>
@@ -37,21 +40,24 @@ const Home = () => {
                 width={"100%"}
                 size="sm"
                 bg={colorMode === "light" ? "light.100" : "#393939"}
-                border={"none"}
+                // border={"none"}
                 rounded={5}
               >
                 <Input
+                  roundedLeft={8}
+                  w={"77%"}
                   border={`1px solid ${
                     colorMode === "light" ? "#230A79" : "#393939"
                   }`}
                   h={"42px"}
                   type="search"
                   placeholder="Search by Transaction hash, token hash , DID or smart contract"
-                  rounded="md"
-                  focusBorderColor="#3725EA"
-                  // value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
                   _placeholder={colorMode === "light" ? "red" : "red"}
+                  _focusVisible={{
+                    borderColor:
+                      colorMode === "light" ? "none" : "1px solid #230A79",
+                  }}
                 />
                 <Button
                   zIndex={99}
@@ -61,9 +67,12 @@ const Home = () => {
                   right={"0"}
                   top={"0"}
                   fontSize={"sm"}
+                  rounded={0}
                   border={`1px solid ${
                     colorMode === "light" ? "#230A79" : "#393939"
                   }`}
+                  borderLeft={0}
+                  borderRight={0}
                   bg={colorMode === "light" ? "transparent" : "#565252"}
                   _hover={{
                     border: `1px solid ${
@@ -80,9 +89,8 @@ const Home = () => {
                 pointerEvents="none"
                 position={"inherit"}
                 right={"0"}
-                // bg={"#393939"}
                 h={"42px"}
-                rounded={7}
+                roundedRight={7}
                 w={"42px"}
                 display={"flex"}
                 justifyContent={"center"}

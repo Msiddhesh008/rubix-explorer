@@ -24,8 +24,8 @@ const SwitchCharts = ({ isSwitchOn, setIsSwitchOn }) => {
           display="flex"
           justifyContent="normal"
           alignItems="center"
-          width="150px"
-          height="45px"
+          width="130px"
+          height="40px"
           borderRadius="10px"
           // backgroundColor={"#27262B"}
           onClick={switch_onChange_handle}
@@ -34,20 +34,20 @@ const SwitchCharts = ({ isSwitchOn, setIsSwitchOn }) => {
           _before={{
             content: '""',
             position: "absolute",
-            width: "60px",
-            height: "32px",
+            width: "40px",
+            height: "25px",
             borderRadius: "10px",
-            backgroundColor: "#fff",
+            backgroundColor: colorMode === "light" ? "#DEDBEB" : "#fff", // Correct usage of backgroundColor
             boxShadow: "0 2px 4px rgba(0, 0, 0, 0.2)",
             transform: isSwitchOn ? "translateX(80px)" : "translateX(0)",
             transition: "transform 0.2s",
-            left: "5px",
-            top: "6px",
+            left: "4px",
+            top: "7px",
           }}
+          
         >
           <Text
-            
-         color={colorMode === "light" ? "#000" : "#ccc"}
+            color={colorMode === "light" ? "#000" : "#ccc"}
             fontWeight="400"
             zIndex={1}
             position="absolute"

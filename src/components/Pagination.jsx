@@ -60,7 +60,7 @@ const Pagination = ({
           className="link pointer"
           isDisabled={currentPage === 1}
           aria-label="Previous Page"
-          bg={colorMode === "light" ? "light.100" : "#757575"}
+          bg={colorMode === "light" ? "light.100" : "#232127"}
           border={colorMode === "light" ? "1px solid #a39797" : "#757575"}
         >
           Previous
@@ -87,7 +87,7 @@ const Pagination = ({
           className="link pointer"
           isDisabled={currentPage === totalPages}
           aria-label="Previous Page"
-          bg={colorMode === "light" ? "light.100" : "#757575"}
+          bg={colorMode === "light" ? "light.100" : "#232127"}
           border={colorMode === "light" ? "1px solid #a39797" : "#757575"}
         >
           Next

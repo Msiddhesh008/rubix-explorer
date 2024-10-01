@@ -19,8 +19,8 @@ const SwitchBtn = ({ isSwitchOn, setIsSwitchOn }) => {
           display="flex"
           justifyContent="normal"
           alignItems="center"
-          width="90px"
-          height="45px"
+          width="80px"
+          height="35px"
           borderRadius="50px"
           // backgroundColor={"#27262B"}
           onClick={switch_onChange_handle}
@@ -29,15 +29,15 @@ const SwitchBtn = ({ isSwitchOn, setIsSwitchOn }) => {
           _before={{
             content: '""',
             position: "absolute",
-            width: "32px",
-            height: "32px",
+            width: "28px",
+            height: "28px",
             borderRadius: "50%",
             backgroundColor: colorMode === "light" ? "#fff" : "#D9D9D933",
             boxShadow: "0 2px 4px rgba(0, 0, 0, 0.2)",
-            transform: isSwitchOn ? "translateX(48px)" : "translateX(0)",
+            transform: isSwitchOn ? "translateX(42px)" : "translateX(0)",
             transition: "transform 0.2s",
             left: "5px",
-            top:"6px"
+            top:"3px"
           }}
         >
           <Icon
@@ -48,7 +48,7 @@ const SwitchBtn = ({ isSwitchOn, setIsSwitchOn }) => {
             position="absolute"
             left={isSwitchOn ? "10px" : "auto"}
             right={isSwitchOn ? "auto" : "10px"}
-            fontSize={"25px"}
+            fontSize={"24px"}
           />
         </Box>
       </Stack>
