@@ -10,7 +10,7 @@ import {
   useColorMode,
   VStack,
 } from "@chakra-ui/react";
-import { Outlet, Link, useLocation } from "react-router-dom";
+import { Outlet, Link, useLocation, NavLink } from "react-router-dom";
 import logo from "../../assets/images/rubix.png";
 import logoLight from "../../assets/images/light-logo.png";
 import { useEffect, useState } from "react";
@@ -72,18 +72,26 @@ const NavBar = () => {
             </Link>
 
             <Box display={"flex"} alignItems={"center"} gap={7}>
-              <Link
+              <NavLink
                 to="/mainNet"
-                style={{ fontSize: "14px", fontWeight: "400" }}
+                style={({ isActive }) => ({
+                  fontSize: "14px",
+                  fontWeight: "400",
+                  borderBottom: isActive ? "1px solid #DE858E" : "0px solid #fff", // Active style for MAIN NET
+                })}
               >
                 MAIN NET
-              </Link>
-              <Link
+              </NavLink>
+              <NavLink
                 to="/subnet"
-                style={{ fontSize: "14px", fontWeight: "400" }}
+                style={({ isActive }) => ({
+                  fontSize: "14px",
+                  fontWeight: "400",
+                  borderBottom: isActive ? "1px solid #DE858E" : "0px solid #fff", // Active style for SUBNETS
+                })}
               >
                 SUBNETS
-              </Link>
+              </NavLink>
               <SwitchBtn
                 isSwitchOn={isSwitchOn}
                 setIsSwitchOn={setIsSwitchOn}
